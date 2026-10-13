@@ -1,0 +1,317 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudySphere AI | Dashboard</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/component.css">
+    <link rel="stylesheet" href="css/dashborard.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<div class="app">
+
+    <aside class="sidebar" id="sidebar">
+        <a href="index.html" class="brand">
+            <span class="brand-icon"><i class="fa-solid fa-graduation-cap"></i></span>
+            <span>StudySphere<span class="accent"> AI</span></span>
+        </a>
+
+        <p class="nav-label">WORKSPACE</p>
+        <nav class="nav-menu">
+            <a href="index.html" class="nav-link active"><i class="fa-solid fa-house"></i> Overview</a>
+            <a href="courses.html" class="nav-link"><i class="fa-solid fa-book-open"></i> My Courses</a>
+            <a href="knowledge-base.html" class="nav-link"><i class="fa-solid fa-brain"></i> Knowledge Base</a>
+            <a href="upload.html" class="nav-link"><i class="fa-solid fa-cloud-arrow-up"></i> Upload Materials</a>
+        </nav>
+
+        <p class="nav-label">STUDY TOOLS</p>
+        <nav class="nav-menu">
+            <a href="tutor.html" class="nav-link"><i class="fa-solid fa-robot"></i> AI Tutor</a>
+            <a href="assessments.html" class="nav-link"><i class="fa-solid fa-clipboard-check"></i> Assessments</a>
+            <a href="revision.html" class="nav-link"><i class="fa-solid fa-layer-group"></i> Revision Studio</a>
+            <a href="study-planner.html" class="nav-link"><i class="fa-solid fa-calendar-days"></i> Study Planner</a>
+        </nav>
+
+        <p class="nav-label">PERSONAL</p>
+        <nav class="nav-menu">
+            <a href="progress.html" class="nav-link"><i class="fa-solid fa-chart-line"></i> Progress</a>
+            <a href="settings.html" class="nav-link"><i class="fa-solid fa-gear"></i> Settings</a>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <div class="avatar">A</div>
+            <div class="user-info">
+                <strong>Alex Morgan</strong>
+                <small>Student Account</small>
+            </div>
+            <a href="profile.html" class="icon-button" aria-label="Profile">
+                <i class="fa-solid fa-ellipsis"></i>
+            </a>
+        </div>
+    </aside>
+
+    <main class="main-content">
+
+        <header class="topbar">
+            <button class="icon-button menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <div class="breadcrumb">Workspace <span>/</span> Overview</div>
+
+            <div class="topbar-actions">
+                <label class="search-box">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="search" id="globalSearch" placeholder="Search courses...">
+                    <kbd>⌘ K</kbd>
+                </label>
+
+                <button class="icon-button" id="notificationBtn" aria-label="Notifications">
+                    <i class="fa-regular fa-bell"></i>
+                    <span class="notification-dot"></span>
+                </button>
+
+                <a href="upload.html" class="btn btn-primary">
+                    <i class="fa-solid fa-plus"></i> Upload Materials
+                </a>
+            </div>
+        </header>
+
+        <section class="dashboard">
+
+            <div class="welcome-section">
+                <div>
+                    <p class="eyebrow">YOUR LEARNING WORKSPACE</p>
+                    <h1>Good morning, Alex <span>✦</span></h1>
+                    <p class="muted">Ready to make progress on your learning today?</p>
+                </div>
+                <a href="courses.html" class="btn btn-secondary">Explore Courses <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+
+            <section class="stats-grid">
+                <article class="card stat-card">
+                    <div class="stat-top"><span>Active Courses</span><i class="fa-solid fa-book-open purple"></i></div>
+                    <h2>04</h2>
+                    <p class="stat-note">Courses in progress</p>
+                </article>
+
+                <article class="card stat-card">
+                    <div class="stat-top"><span>Study Time</span><i class="fa-regular fa-clock teal"></i></div>
+                    <h2>12.5 <small>hrs</small></h2>
+                    <p class="stat-note">This week</p>
+                </article>
+
+                <article class="card stat-card">
+                    <div class="stat-top"><span>Topics Mastered</span><i class="fa-solid fa-bullseye green"></i></div>
+                    <h2>28</h2>
+                    <p class="stat-note">Across all courses</p>
+                </article>
+
+                <article class="card stat-card">
+                    <div class="stat-top"><span>Study Streak</span><i class="fa-solid fa-fire orange"></i></div>
+                    <h2>07 <small>days</small></h2>
+                    <p class="stat-note">Keep it going!</p>
+                </article>
+            </section>
+
+            <section class="section-block">
+                <div class="section-heading">
+                    <div>
+                        <h2>Continue Learning</h2>
+                        <p class="muted">Pick up where you left off.</p>
+                    </div>
+                    <a href="courses.html" class="text-link">View all <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+                <div class="course-grid">
+                    <article class="card course-card searchable">
+                        <div class="course-icon purple-bg"><i class="fa-solid fa-network-wired"></i></div>
+                        <span class="course-tag">MACHINE LEARNING</span>
+                        <h3>Machine Learning Fundamentals</h3>
+                        <p class="muted">Next: Neural Networks</p>
+                        <div class="progress-info"><span>Progress</span><strong>68%</strong></div>
+                        <div class="progress-track"><div class="progress-fill purple-fill" style="width:68%"></div></div>
+                        <a href="courses.html" class="btn btn-secondary full-width">Continue Learning</a>
+                    </article>
+
+                    <article class="card course-card searchable">
+                        <div class="course-icon teal-bg"><i class="fa-solid fa-pen-ruler"></i></div>
+                        <span class="course-tag">DESIGN</span>
+                        <h3>Human-Computer Interaction</h3>
+                        <p class="muted">Next: Usability Testing</p>
+                        <div class="progress-info"><span>Progress</span><strong>42%</strong></div>
+                        <div class="progress-track"><div class="progress-fill teal-fill" style="width:42%"></div></div>
+                        <a href="courses.html" class="btn btn-secondary full-width">Continue Learning</a>
+                    </article>
+
+                    <article class="card course-card searchable">
+                        <div class="course-icon orange-bg"><i class="fa-solid fa-code"></i></div>
+                        <span class="course-tag">COMPUTER SCIENCE</span>
+                        <h3>Data Structures & Algorithms</h3>
+                        <p class="muted">Next: Graph Algorithms</p>
+                        <div class="progress-info"><span>Progress</span><strong>85%</strong></div>
+                        <div class="progress-track"><div class="progress-fill orange-fill" style="width:85%"></div></div>
+                        <a href="courses.html" class="btn btn-secondary full-width">Continue Learning</a>
+                    </article>
+                </div>
+            </section>
+
+            <div class="content-grid">
+
+                <section class="section-block">
+                    <div class="section-heading">
+                        <div>
+                            <h2>Recent Materials</h2>
+                            <p class="muted">Your recently added resources.</p>
+                        </div>
+                        <a href="upload.html" class="text-link">View all</a>
+                    </div>
+
+                    <div class="card materials-card">
+                        <div class="material-row searchable">
+                            <div class="file-icon pdf"><i class="fa-solid fa-file-pdf"></i></div>
+                            <div class="material-info">
+                                <strong>Introduction to Neural Networks.pdf</strong>
+                                <small>Machine Learning · PDF</small>
+                            </div>
+                            <span class="status status-ready">Ready</span>
+                        </div>
+
+                        <div class="material-row searchable">
+                            <div class="file-icon ppt"><i class="fa-solid fa-file-powerpoint"></i></div>
+                            <div class="material-info">
+                                <strong>HCI Lecture 04.pptx</strong>
+                                <small>Human-Computer Interaction · PPTX</small>
+                            </div>
+                            <span class="status status-processing">Processing</span>
+                        </div>
+
+                        <div class="material-row searchable">
+                            <div class="file-icon video"><i class="fa-solid fa-file-video"></i></div>
+                            <div class="material-info">
+                                <strong>Machine Learning Lecture 08.mp4</strong>
+                                <small>Machine Learning · Video</small>
+                            </div>
+                            <span class="status status-warning">Warnings</span>
+                        </div>
+
+                        <a href="upload.html" class="btn btn-secondary full-width">Upload New Material</a>
+                    </div>
+                </section>
+
+                <section class="section-block">
+                    <div class="section-heading">
+                        <div>
+                            <h2>Study Assistant</h2>
+                            <p class="muted">Ask about your study materials.</p>
+                        </div>
+                        <i class="fa-solid fa-sparkles purple"></i>
+                    </div>
+
+                    <div class="card assistant-card">
+                        <div class="assistant-intro">
+                            <div class="assistant-icon"><i class="fa-solid fa-robot"></i></div>
+                            <div>
+                                <h3>What are you learning?</h3>
+                                <p class="muted">Get help with concepts from your materials.</p>
+                            </div>
+                        </div>
+
+                        <form id="assistantForm">
+                            <label for="assistantInput" class="sr-only">Your study question</label>
+                            <textarea id="assistantInput" placeholder="Ask your study question..." rows="3" required></textarea>
+                            <button type="submit" class="btn btn-primary full-width">Ask Study Assistant <i class="fa-solid fa-arrow-right"></i></button>
+                        </form>
+
+                        <div class="prompt-chips">
+                            <button class="chip" data-prompt="Explain a difficult concept">Explain a concept</button>
+                            <button class="chip" data-prompt="Summarize my latest lecture">Summarize lecture</button>
+                            <button class="chip" data-prompt="Generate practice questions">Practice questions</button>
+                        </div>
+
+                        <div id="assistantResponse" class="assistant-response" aria-live="polite" hidden></div>
+                        <p class="demo-note">Demo mode · AI answers are not connected yet.</p>
+                    </div>
+                </section>
+
+            </div>
+
+            <div class="content-grid bottom-grid">
+
+                <section class="section-block">
+                    <div class="section-heading">
+                        <div>
+                            <h2>Today's Study Plan</h2>
+                            <p class="muted">Small steps, steady progress.</p>
+                        </div>
+                        <a href="study-planner.html" class="text-link">Full plan</a>
+                    </div>
+
+                    <div class="card tasks-card">
+                        <label class="task-row">
+                            <input type="checkbox" class="task-checkbox">
+                            <span class="task-content"><strong>Review Neural Networks</strong><small>Today · 4:00 PM</small></span>
+                            <span class="task-time">30 min</span>
+                        </label>
+                        <label class="task-row">
+                            <input type="checkbox" class="task-checkbox">
+                            <span class="task-content"><strong>Complete HCI practice quiz</strong><small>Today · 6:00 PM</small></span>
+                            <span class="task-time">20 min</span>
+                        </label>
+                        <label class="task-row">
+                            <input type="checkbox" class="task-checkbox">
+                            <span class="task-content"><strong>Revise Data Structures</strong><small>Tomorrow · 10:00 AM</small></span>
+                            <span class="task-time">45 min</span>
+                        </label>
+                    </div>
+                </section>
+
+                <section class="section-block">
+                    <div class="section-heading">
+                        <div>
+                            <h2>Weekly Activity</h2>
+                            <p class="muted">Your study time this week.</p>
+                        </div>
+                        <span class="activity-total">12.5 hrs</span>
+                    </div>
+
+                    <div class="card activity-card">
+                        <div class="chart" role="img" aria-label="Study hours: Monday 1.5, Tuesday 2, Wednesday 1, Thursday 2.5, Friday 1.5, Saturday 3, Sunday 1 hour">
+                            <div class="chart-column"><div class="chart-bar" style="height:50%" title="1.5 hours"></div><span>Mon</span></div>
+                            <div class="chart-column"><div class="chart-bar" style="height:67%" title="2 hours"></div><span>Tue</span></div>
+                            <div class="chart-column"><div class="chart-bar" style="height:34%" title="1 hour"></div><span>Wed</span></div>
+                            <div class="chart-column"><div class="chart-bar" style="height:84%" title="2.5 hours"></div><span>Thu</span></div>
+                            <div class="chart-column"><div class="chart-bar" style="height:50%" title="1.5 hours"></div><span>Fri</span></div>
+                            <div class="chart-column"><div class="chart-bar highlighted" style="height:100%" title="3 hours"></div><span>Sat</span></div>
+                            <div class="chart-column"><div class="chart-bar" style="height:34%" title="1 hour"></div><span>Sun</span></div>
+                        </div>
+                        <p class="demo-note">Illustrative sample data</p>
+                    </div>
+                </section>
+
+            </div>
+
+            <footer class="footer">
+                <span>© 2026 StudySphere AI</span>
+                <span>Learn smarter, every day.</span>
+            </footer>
+
+        </section>
+    </main>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="js/main.js"></script>
+<script src="js/dashboard.js"></script>
+</body>
+</html>

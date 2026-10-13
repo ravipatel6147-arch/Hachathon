@@ -1,0 +1,361 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Courses | StudySphere AI</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/component.css">
+    <link rel="stylesheet" href="css/courses.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<div class="app">
+
+    <!-- SIDEBAR: shared navigation -->
+    <aside class="sidebar" id="sidebar">
+
+        <a href="index.html" class="brand">
+            <span class="brand-icon"><i class="fa-solid fa-graduation-cap"></i></span>
+            <span>StudySphere<span class="accent"> AI</span></span>
+        </a>
+
+        <p class="nav-label">WORKSPACE</p>
+        <nav class="nav-menu">
+            <a href="index.html" class="nav-link">
+                <i class="fa-solid fa-house"></i> Overview
+            </a>
+            <a href="courses.html" class="nav-link active" aria-current="page">
+                <i class="fa-solid fa-book-open"></i> My Courses
+            </a>
+            <a href="knowledge-base.html" class="nav-link">
+                <i class="fa-solid fa-brain"></i> Knowledge Base
+            </a>
+            <a href="upload.html" class="nav-link">
+                <i class="fa-solid fa-cloud-arrow-up"></i> Upload Materials
+            </a>
+        </nav>
+
+        <p class="nav-label">STUDY TOOLS</p>
+        <nav class="nav-menu">
+            <a href="tutor.html" class="nav-link">
+                <i class="fa-solid fa-robot"></i> AI Tutor
+            </a>
+            <a href="assessments.html" class="nav-link">
+                <i class="fa-solid fa-clipboard-check"></i> Assessments
+            </a>
+            <a href="revision.html" class="nav-link">
+                <i class="fa-solid fa-layer-group"></i> Revision Studio
+            </a>
+            <a href="study-planner.html" class="nav-link">
+                <i class="fa-solid fa-calendar-days"></i> Study Planner
+            </a>
+        </nav>
+
+        <p class="nav-label">PERSONAL</p>
+        <nav class="nav-menu">
+            <a href="progress.html" class="nav-link">
+                <i class="fa-solid fa-chart-line"></i> Progress
+            </a>
+            <a href="settings.html" class="nav-link">
+                <i class="fa-solid fa-gear"></i> Settings
+            </a>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <div class="avatar">A</div>
+            <div class="user-info">
+                <strong>Alex Morgan</strong>
+                <small>Student Account</small>
+            </div>
+            <a href="profile.html" class="icon-button" aria-label="Open profile">
+                <i class="fa-solid fa-ellipsis"></i>
+            </a>
+        </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+        <header class="topbar">
+            <button class="icon-button menu-toggle" id="menuToggle"
+                    aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <div class="breadcrumb">
+                <a href="index.html">Workspace</a>
+                <span>/</span>
+                My Courses
+            </div>
+
+            <div class="topbar-actions">
+                <label class="search-box">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="search" id="globalSearch"
+                           placeholder="Search courses..."
+                           aria-label="Search courses">
+                </label>
+
+                <button class="icon-button" id="notificationBtn"
+                        aria-label="Notifications">
+                    <i class="fa-regular fa-bell"></i>
+                </button>
+
+                <a href="upload.html" class="btn btn-primary">
+                    <i class="fa-solid fa-plus"></i> Add Materials
+                </a>
+            </div>
+        </header>
+
+        <section class="courses-page">
+
+            <!-- PAGE INTRO -->
+            <div class="page-intro">
+                <div>
+                    <p class="eyebrow">YOUR LEARNING WORKSPACE</p>
+                    <h1>My Courses</h1>
+                    <p class="muted">
+                        Manage your courses, explore topics and continue learning.
+                    </p>
+                </div>
+
+                <a href="upload.html" class="btn btn-primary">
+                    <i class="fa-solid fa-cloud-arrow-up"></i>
+                    Upload Materials
+                </a>
+            </div>
+
+            <!-- COURSE SUMMARY -->
+            <section class="course-summary">
+                <article class="card summary-card">
+                    <span class="summary-icon purple-bg">
+                        <i class="fa-solid fa-book-open"></i>
+                    </span>
+                    <div>
+                        <p class="muted">Total Courses</p>
+                        <h2>04</h2>
+                    </div>
+                </article>
+
+                <article class="card summary-card">
+                    <span class="summary-icon teal-bg">
+                        <i class="fa-solid fa-spinner"></i>
+                    </span>
+                    <div>
+                        <p class="muted">In Progress</p>
+                        <h2>03</h2>
+                    </div>
+                </article>
+
+                <article class="card summary-card">
+                    <span class="summary-icon orange-bg">
+                        <i class="fa-solid fa-circle-check"></i>
+                    </span>
+                    <div>
+                        <p class="muted">Completed</p>
+                        <h2>01</h2>
+                    </div>
+                </article>
+            </section>
+
+            <!-- FILTERS -->
+            <div class="course-toolbar">
+                <div class="filter-tabs" role="group" aria-label="Filter courses">
+                    <button class="filter-tab active" data-filter="all">All Courses</button>
+                    <button class="filter-tab" data-filter="progress">In Progress</button>
+                    <button class="filter-tab" data-filter="completed">Completed</button>
+                </div>
+
+                <label class="sort-select">
+                    <span class="muted">Sort:</span>
+                    <select id="courseSort" aria-label="Sort courses">
+                        <option value="default">Recently accessed</option>
+                        <option value="name">Course name</option>
+                        <option value="progress">Progress</option>
+                    </select>
+                </label>
+            </div>
+
+            <!-- COURSE CARDS -->
+            <section class="courses-grid" id="coursesGrid">
+
+                <article class="card course-item searchable"
+                         data-status="progress"
+                         data-name="Machine Learning Fundamentals"
+                         data-progress="68">
+
+                    <div class="course-card-top">
+                        <div class="course-icon purple-bg">
+                            <i class="fa-solid fa-network-wired"></i>
+                        </div>
+                        <span class="course-status">In Progress</span>
+                    </div>
+
+                    <p class="course-category">COMPUTER SCIENCE</p>
+                    <h2>Machine Learning Fundamentals</h2>
+                    <p class="muted course-description">
+                        Learn model training, neural networks and core ML concepts.
+                    </p>
+
+                    <div class="course-meta">
+                        <span><i class="fa-regular fa-file-lines"></i> 12 materials</span>
+                        <span><i class="fa-solid fa-list-check"></i> 18 topics</span>
+                    </div>
+
+                    <div class="progress-info">
+                        <span>Course progress</span><strong>68%</strong>
+                    </div>
+                    <div class="progress-track">
+                        <div class="progress-fill purple-fill" style="width:68%"></div>
+                    </div>
+
+                    <div class="course-footer">
+                        <span class="muted">Next: Neural Networks</span>
+                        <a href="course-detail.html?course=ml"
+                           class="btn btn-secondary">Open Course <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <article class="card course-item searchable"
+                         data-status="progress"
+                         data-name="Human-Computer Interaction"
+                         data-progress="42">
+
+                    <div class="course-card-top">
+                        <div class="course-icon teal-bg">
+                            <i class="fa-solid fa-pen-ruler"></i>
+                        </div>
+                        <span class="course-status">In Progress</span>
+                    </div>
+
+                    <p class="course-category">DESIGN</p>
+                    <h2>Human-Computer Interaction</h2>
+                    <p class="muted course-description">
+                        Explore user research, usability and interface design.
+                    </p>
+
+                    <div class="course-meta">
+                        <span><i class="fa-regular fa-file-lines"></i> 8 materials</span>
+                        <span><i class="fa-solid fa-list-check"></i> 14 topics</span>
+                    </div>
+
+                    <div class="progress-info">
+                        <span>Course progress</span><strong>42%</strong>
+                    </div>
+                    <div class="progress-track">
+                        <div class="progress-fill teal-fill" style="width:42%"></div>
+                    </div>
+
+                    <div class="course-footer">
+                        <span class="muted">Next: Usability Testing</span>
+                        <a href="course-detail.html?course=hci"
+                           class="btn btn-secondary">Open Course <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <article class="card course-item searchable"
+                         data-status="progress"
+                         data-name="Data Structures and Algorithms"
+                         data-progress="85">
+
+                    <div class="course-card-top">
+                        <div class="course-icon orange-bg">
+                            <i class="fa-solid fa-code"></i>
+                        </div>
+                        <span class="course-status">In Progress</span>
+                    </div>
+
+                    <p class="course-category">PROGRAMMING</p>
+                    <h2>Data Structures & Algorithms</h2>
+                    <p class="muted course-description">
+                        Practice data structures, searching and graph algorithms.
+                    </p>
+
+                    <div class="course-meta">
+                        <span><i class="fa-regular fa-file-lines"></i> 15 materials</span>
+                        <span><i class="fa-solid fa-list-check"></i> 22 topics</span>
+                    </div>
+
+                    <div class="progress-info">
+                        <span>Course progress</span><strong>85%</strong>
+                    </div>
+                    <div class="progress-track">
+                        <div class="progress-fill orange-fill" style="width:85%"></div>
+                    </div>
+
+                    <div class="course-footer">
+                        <span class="muted">Next: Graph Algorithms</span>
+                        <a href="course-detail.html?course=dsa"
+                           class="btn btn-secondary">Open Course <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <article class="card course-item searchable"
+                         data-status="completed"
+                         data-name="Introduction to Python"
+                         data-progress="100">
+
+                    <div class="course-card-top">
+                        <div class="course-icon green-bg">
+                            <i class="fa-brands fa-python"></i>
+                        </div>
+                        <span class="course-status completed-status">Completed</span>
+                    </div>
+
+                    <p class="course-category">PROGRAMMING</p>
+                    <h2>Introduction to Python</h2>
+                    <p class="muted course-description">
+                        Review Python fundamentals, functions and core syntax.
+                    </p>
+
+                    <div class="course-meta">
+                        <span><i class="fa-regular fa-file-lines"></i> 9 materials</span>
+                        <span><i class="fa-solid fa-list-check"></i> 16 topics</span>
+                    </div>
+
+                    <div class="progress-info">
+                        <span>Course progress</span><strong>100%</strong>
+                    </div>
+                    <div class="progress-track">
+                        <div class="progress-fill green-fill" style="width:100%"></div>
+                    </div>
+
+                    <div class="course-footer">
+                        <span class="muted">All topics completed</span>
+                        <a href="course-detail.html?course=python"
+                           class="btn btn-secondary">Review Course <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+            </section>
+
+            <div id="emptyState" class="card empty-state" hidden>
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <h2>No courses found</h2>
+                <p class="muted">Try another search or filter.</p>
+            </div>
+
+            <footer class="footer">
+                <span>© 2026 StudySphere AI</span>
+                <span>Learn smarter, every day.</span>
+            </footer>
+
+        </section>
+    </main>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="js/main.js"></script>
+<script src="js/courses.js"></script>
+
+</body>
+</html>

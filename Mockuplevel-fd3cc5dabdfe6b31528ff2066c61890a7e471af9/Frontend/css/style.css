@@ -1,0 +1,144 @@
+
+:root {
+    --bg: #09090b;
+    --sidebar: #0d0d10;
+    --card: #141418;
+    --elevated: #1b1b21;
+    --border: #292930;
+    --text: #f5f5f7;
+    --muted: #a1a1aa;
+    --subtle: #71717a;
+    --purple: #8b7cff;
+    --teal: #2dd4bf;
+    --green: #4ade80;
+    --orange: #fbbf24;
+    --radius: 14px;
+    --sidebar-width: 250px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input,
+textarea {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+    outline: 2px solid var(--purple);
+    outline-offset: 3px;
+}
+
+h1, h2, h3 {
+    line-height: 1.3;
+    letter-spacing: -0.03em;
+}
+
+h1 { font-size: clamp(24px, 3vw, 30px); }
+h2 { font-size: 18px; }
+h3 { font-size: 15px; }
+
+p { margin-top: 5px; }
+
+.muted { color: var(--muted); }
+.accent, .purple { color: var(--purple); }
+.teal { color: var(--teal); }
+.green { color: var(--green); }
+.orange { color: var(--orange); }
+
+.app {
+    min-height: 100vh;
+}
+
+.main-content {
+    margin-left: var(--sidebar-width);
+    min-width: 0;
+}
+
+.dashboard {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 30px 34px;
+}
+
+.section-block {
+    min-width: 0;
+    margin-bottom: 30px;
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.text-link {
+    color: var(--purple);
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.text-link:hover {
+    color: #b1a7ff;
+}
+
+.eyebrow,
+.nav-label {
+    color: var(--subtle);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+}
+
+.eyebrow {
+    margin-bottom: 10px;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 22px 0 6px;
+    color: var(--subtle);
+    font-size: 12px;
+    border-top: 1px solid var(--border);
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+}

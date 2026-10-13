@@ -1,0 +1,11 @@
+Using UV for instead of traditional env (study-Hitesh sir)
+Commands
+1.pip install uv
+2.uv sync//syncs my project.tomal file with yours
+3.uv lock --upgrade//will upgrade all ur dpendancy versions
+//testing docker redis in docker
+docker run -d -p 6379:6379 --name redis-server redis:alpine
+
+//run celery worker
+In differnet terminal run the celery worker
+celery -A src.tasks.celery_worker.celery_app worker --loglevel=info
